@@ -1,0 +1,1711 @@
+<__main__.Main object at 0x7f307c1eec88>  Wed Jun  6 17:54:24 2018  
+	Traceback (most recent call last):
+		  File "Main.py", line 47, in makeEnvironment
+		    return Environment(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/mvc/model/Environment.py", line 10, in __init__
+		    super().__init__(environment_name)
+		TypeError: object.__init__() takes no parameters
+		
+
+<__main__.Main object at 0x7fea3f0aac88>  Wed Jun  6 17:55:36 2018  
+	Traceback (most recent call last):
+		  File "Main.py", line 47, in makeEnvironment
+		    return Environment(environment_name)
+		NameError: name 'Environment' is not defined
+		
+
+<__main__.Main object at 0x7efd54f37c88>  Wed Jun  6 17:59:28 2018  
+	Traceback (most recent call last):
+		  File "Main.py", line 47, in makeEnvironment
+		    return Environment2D(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/mvc/model/Environment.py", line 11, in __init__
+		    self.prev_frame  = np.zeros(self.environment.reset().shape).tolist()
+		NameError: name 'np' is not defined
+		
+
+<__main__.Main object at 0x7fcb5f105e10>  Wed Jun  6 18:17:19 2018  
+	Traceback (most recent call last):
+		  File "Main.py", line 47, in makeEnvironment
+		    return Environment2D(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/mvc/model/Environment.py", line 13, in __init__
+		    self.prev_frame  = np.zeros(skimage.measure.block_reduce( self.environment.reset(), self.pool_shape, np.mean).shape)
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/skimage/measure/block.py", line 56, in block_reduce
+		    raise ValueError("`block_size` must have the same length "
+		ValueError: `block_size` must have the same length as `image.shape`.
+		
+
+<genetics.Substrate.Substrate object at 0x7f2cdfe4aa20>  Thu Jun  7 00:37:11 2018  
+	lambda c0,c1,c2,c3:(-1.1756262843313539*c1+2.254550712095261*(np.absolute()+0.)+0.)
+
+<genetics.Substrate.Substrate object at 0x7f2cdfe4aa20>  Thu Jun  7 00:37:11 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: invalid number of arguments
+		
+
+<genetics.Substrate.Substrate object at 0x7f2cdfe4aa20>  Thu Jun  7 00:37:11 2018  
+	lambda c0,c1,c2,c3:(-1.1756262843313539*c1+2.254550712095261*(np.absolute()+0.)+0.)
+
+<genetics.Substrate.Substrate object at 0x7f2cdfe4aa20>  Thu Jun  7 00:37:11 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: invalid number of arguments
+		
+
+<__main__.Main object at 0x7f86eb6a9630>  Thu Jun  7 08:35:09 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/gym/gym/envs/registration.py", line 143, in spec
+		    return self.env_specs[id]
+		KeyError: 'AcroBot-v1'
+		
+		During handling of the above exception, another exception occurred:
+		
+		Traceback (most recent call last):
+		  File "Main.py", line 47, in makeEnvironment
+		    return Environment2D(environment_name)
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/mvc/model/Environment.py", line 12, in __init__
+		    self.environment = gym.make(environment_name)
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/gym/gym/envs/registration.py", line 167, in make
+		    return registry.make(id)
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/gym/gym/envs/registration.py", line 118, in make
+		    spec = self.spec(id)
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/gym/gym/envs/registration.py", line 153, in spec
+		    raise error.UnregisteredEnv('No registered env with id: {}'.format(id))
+		gym.error.UnregisteredEnv: No registered env with id: AcroBot-v1
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032f46518>  Thu Jun  7 09:13:49 2018  
+	lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-(1.0*c0+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032f46518>  Thu Jun  7 09:13:49 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-(1.0*c0+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                  ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f403258a320>  Thu Jun  7 09:13:49 2018  
+	lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032f46518>  Thu Jun  7 09:13:49 2018  
+	lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-(1.0*c0+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032e4dd68>  Thu Jun  7 09:13:49 2018  
+	lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f403258a320>  Thu Jun  7 09:13:49 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                                        ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032f46518>  Thu Jun  7 09:13:49 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-(1.0*c0+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                  ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032e4dd68>  Thu Jun  7 09:13:50 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                    ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f403258a320>  Thu Jun  7 09:13:50 2018  
+	lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032f46518>  Thu Jun  7 09:13:50 2018  
+	lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-(1.0*c0+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032e4dd68>  Thu Jun  7 09:13:50 2018  
+	lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f403258a320>  Thu Jun  7 09:13:50 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                                        ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032f46518>  Thu Jun  7 09:13:50 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-(1.0*c0+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                  ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032803e10>  Thu Jun  7 09:13:50 2018  
+	lambda c0,c1:(-1.9019207038078516*(0.3989422804*np.exp((-0.5*(1.0*1.0+0.)).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032e4dd68>  Thu Jun  7 09:13:51 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                    ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032803e10>  Thu Jun  7 09:13:51 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		AttributeError: 'float' object has no attribute 'clip'
+		
+
+<genetics.Substrate.Substrate object at 0x7f403258a320>  Thu Jun  7 09:13:51 2018  
+	lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032e4dd68>  Thu Jun  7 09:13:51 2018  
+	lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f403258a320>  Thu Jun  7 09:13:52 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                                        ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032e4dd68>  Thu Jun  7 09:13:52 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 80, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-(1.0*c1+0.).clip(min=-100.,max=100.))+0.)+0.+0.)
+		                                                                                                    ^
+		SyntaxError: unexpected EOF while parsing
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032803e10>  Thu Jun  7 09:13:52 2018  
+	lambda c0,c1:(-1.9019207038078516*(0.3989422804*np.exp((-0.5*(1.0*2.0+0.)).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032803e10>  Thu Jun  7 09:13:53 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		AttributeError: 'float' object has no attribute 'clip'
+		
+
+<genetics.Substrate.Substrate object at 0x7f4032803e10>  Thu Jun  7 09:13:53 2018  
+	lambda c0,c1:(-1.9019207038078516*(0.3989422804*np.exp((-0.5*(1.0*3.0+0.)).clip(min=-100.,max=100.))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4032803e10>  Thu Jun  7 09:13:53 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		AttributeError: 'float' object has no attribute 'clip'
+		
+
+<genetics.Substrate.Substrate object at 0x7f251932ddd8>  Thu Jun  7 09:18:45 2018  
+	lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-min(100,max(-100,(1.0*c0+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f251932ddd8>  Thu Jun  7 09:18:45 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f251932ddd8>  Thu Jun  7 09:18:45 2018  
+	lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-min(100,max(-100,(1.0*c0+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f251932ddd8>  Thu Jun  7 09:18:45 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f251932ddd8>  Thu Jun  7 09:18:45 2018  
+	lambda c0,c1:(1.6209140882334192*(1/(1+np.exp(-min(100,max(-100,(1.0*c0+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f251932ddd8>  Thu Jun  7 09:18:45 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f25185d9eb8>  Thu Jun  7 09:18:46 2018  
+	lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-min(100,max(-100,(1.0*c1+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f25185d9eb8>  Thu Jun  7 09:18:46 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f25185d9eb8>  Thu Jun  7 09:18:46 2018  
+	lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-min(100,max(-100,(1.0*c1+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f25185d9eb8>  Thu Jun  7 09:18:47 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f25185d9eb8>  Thu Jun  7 09:18:47 2018  
+	lambda c0,c1:(-0.18700966462194163*(1/(1+np.exp(-min(100,max(-100,(1.0*c1+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f25185d9eb8>  Thu Jun  7 09:18:47 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f2519896cf8>  Thu Jun  7 09:18:48 2018  
+	lambda c0,c1:(-0.2510090135874724*(0.3989422804*np.exp(min(100,max(-100,-0.5*(1.0*c1+1.371937705419616*1.0+0.))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f2519896cf8>  Thu Jun  7 09:18:48 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f2519896cf8>  Thu Jun  7 09:18:48 2018  
+	lambda c0,c1:(-0.2510090135874724*(0.3989422804*np.exp(min(100,max(-100,-0.5*(1.0*c1+1.371937705419616*2.0+0.))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f2519896cf8>  Thu Jun  7 09:18:48 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f251893ef28>  Thu Jun  7 09:18:48 2018  
+	lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-min(100,max(-100,(1.0*c1+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f2519896cf8>  Thu Jun  7 09:18:49 2018  
+	lambda c0,c1:(-0.2510090135874724*(0.3989422804*np.exp(min(100,max(-100,-0.5*(1.0*c1+1.371937705419616*3.0+0.))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f251893ef28>  Thu Jun  7 09:18:49 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f251893ef28>  Thu Jun  7 09:18:49 2018  
+	lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-min(100,max(-100,(1.0*c1+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f2519896cf8>  Thu Jun  7 09:18:49 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f251893ef28>  Thu Jun  7 09:18:49 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<genetics.Substrate.Substrate object at 0x7f251893ef28>  Thu Jun  7 09:18:50 2018  
+	lambda c0,c1:(1.7292055792002365*c0+1.3994597192515321*(1/(1+np.exp(-min(100,max(-100,(1.0*c1+0.)))))+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f251893ef28>  Thu Jun  7 09:18:50 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/genetics/Substrate.py", line 81, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/site-packages/numpy/core/numeric.py", line 1914, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+		
+
+<Worker(Worker-1, initial)>  Sat Jun  9 00:09:17 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/mvc/model/Worker.py", line 208, in loadGenomesFromFiles
+		    genome = json.load(f)#.read()
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/json/__init__.py", line 296, in load
+		    return loads(fp.read(),
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/codecs.py", line 321, in decode
+		    (result, consumed) = self._buffer_decode(data, self.errors, final)
+		UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8d in position 0: invalid start byte
+		
+
+<Worker(Worker-1, initial)>  Sat Jun  9 00:11:14 2018  
+	Traceback (most recent call last):
+		  File "/home/sebastiaan/Matt/HyperNEAT/src/mvc/model/Worker.py", line 208, in loadGenomesFromFiles
+		    genome = json.load(f)#.read()
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/json/__init__.py", line 296, in load
+		    return loads(fp.read(),
+		  File "/home/sebastiaan/anaconda3/envs/neat/lib/python3.6/codecs.py", line 321, in decode
+		    (result, consumed) = self._buffer_decode(data, self.errors, final)
+		UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8d in position 0: invalid start byte
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b7e66d8>  Sat Jun  9 15:18:31 2018  
+	lambda c0,c1:(0.8400178010214825*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b7e66d8>  Sat Jun  9 15:18:31 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b7e66d8>  Sat Jun  9 15:18:31 2018  
+	lambda c0,c1:(0.8400178010214825*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b7e66d8>  Sat Jun  9 15:18:31 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b7e66d8>  Sat Jun  9 15:18:31 2018  
+	lambda c0,c1:(0.8400178010214825*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b7e66d8>  Sat Jun  9 15:18:31 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b6c4a20>  Sat Jun  9 15:18:33 2018  
+	lambda c0,c1:(2.903865887758969*l+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b6c4a20>  Sat Jun  9 15:18:33 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b6c4a20>  Sat Jun  9 15:18:33 2018  
+	lambda c0,c1:(2.903865887758969*l+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b6c4a20>  Sat Jun  9 15:18:33 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b6c4a20>  Sat Jun  9 15:18:33 2018  
+	lambda c0,c1:(2.903865887758969*l+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b6c4a20>  Sat Jun  9 15:18:33 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf08b9be80>  Sat Jun  9 15:18:35 2018  
+	lambda c0,c1:(-0.5520930278109315*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf08b9be80>  Sat Jun  9 15:18:35 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf08b9be80>  Sat Jun  9 15:18:35 2018  
+	lambda c0,c1:(-0.5520930278109315*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf08b9be80>  Sat Jun  9 15:18:35 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf08b9be80>  Sat Jun  9 15:18:35 2018  
+	lambda c0,c1:(-0.5520930278109315*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf08b9be80>  Sat Jun  9 15:18:35 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b672eb8>  Sat Jun  9 15:18:36 2018  
+	lambda c0,c1:(-0.06328343833462213*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b672eb8>  Sat Jun  9 15:18:36 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b672eb8>  Sat Jun  9 15:18:36 2018  
+	lambda c0,c1:(-0.06328343833462213*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b672eb8>  Sat Jun  9 15:18:36 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fdf0b672eb8>  Sat Jun  9 15:18:36 2018  
+	lambda c0,c1:(-0.06328343833462213*(l+1)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fdf0b672eb8>  Sat Jun  9 15:18:36 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    self.weights.append( np.clip(np.fromfunction( cppn_func, shape, dtype=float ),-self.cppn_output_range,self.cppn_output_range ))
+		  File "/home/kieran/anaconda3/envs/openai/lib/python3.6/site-packages/numpy/core/numeric.py", line 2132, in fromfunction
+		    return function(*args, **kwargs)
+		  File "<string>", line 1, in <lambda>
+		NameError: name 'l' is not defined
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad74c588>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad74c588>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad74c588>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad74c588>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad74c588>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad74c588>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad694198>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad694198>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad694198>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad694198>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad694198>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad694198>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad556d68>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad556d68>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad556d68>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad556d68>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad556d68>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad556d68>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad49e978>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad49e978>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad49e978>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad49e978>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7fa1ad49e978>  Sat Jun  9 15:20:01 2018  
+	None
+
+<genetics.Substrate.Substrate object at 0x7fa1ad49e978>  Sat Jun  9 15:20:01 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 85, in buildSmart
+		    func_str = func_str.replace('l',str(l))
+		AttributeError: 'NoneType' object has no attribute 'replace'
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfda8c1d0>  Sat Jun  9 15:21:10 2018  
+	0.0ambda c0,c1:(2.5699113755263525*0.0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfda8c1d0>  Sat Jun  9 15:21:10 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    0.0ambda c0,c1:(2.5699113755263525*0.0+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfda8c1d0>  Sat Jun  9 15:21:10 2018  
+	1.0ambda c0,c1:(2.5699113755263525*1.0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfda8c1d0>  Sat Jun  9 15:21:10 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    1.0ambda c0,c1:(2.5699113755263525*1.0+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfda8c1d0>  Sat Jun  9 15:21:10 2018  
+	2.0ambda c0,c1:(2.5699113755263525*2.0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfda8c1d0>  Sat Jun  9 15:21:10 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    2.0ambda c0,c1:(2.5699113755263525*2.0+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfaedfe48>  Sat Jun  9 15:21:12 2018  
+	0.0ambda c0,c1:(-0.15495702547604884*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfaedfe48>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    0.0ambda c0,c1:(-0.15495702547604884*c1+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfaedfe48>  Sat Jun  9 15:21:12 2018  
+	1.0ambda c0,c1:(-0.15495702547604884*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfaedfe48>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    1.0ambda c0,c1:(-0.15495702547604884*c1+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfaedfe48>  Sat Jun  9 15:21:12 2018  
+	2.0ambda c0,c1:(-0.15495702547604884*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfaedfe48>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    2.0ambda c0,c1:(-0.15495702547604884*c1+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfdcc05f8>  Sat Jun  9 15:21:12 2018  
+	0.0ambda c0,c1:(-2.161365740242263*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfdcc05f8>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    0.0ambda c0,c1:(-2.161365740242263*c1+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfdcc05f8>  Sat Jun  9 15:21:12 2018  
+	1.0ambda c0,c1:(-2.161365740242263*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfdcc05f8>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    1.0ambda c0,c1:(-2.161365740242263*c1+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfdcc05f8>  Sat Jun  9 15:21:12 2018  
+	2.0ambda c0,c1:(-2.161365740242263*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfdcc05f8>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    2.0ambda c0,c1:(-2.161365740242263*c1+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfdc6e438>  Sat Jun  9 15:21:12 2018  
+	0.0ambda c0,c1:(1.4755512528820471*c0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfdc6e438>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    0.0ambda c0,c1:(1.4755512528820471*c0+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfdc6e438>  Sat Jun  9 15:21:12 2018  
+	1.0ambda c0,c1:(1.4755512528820471*c0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfdc6e438>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    1.0ambda c0,c1:(1.4755512528820471*c0+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f6bfdc6e438>  Sat Jun  9 15:21:12 2018  
+	2.0ambda c0,c1:(1.4755512528820471*c0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f6bfdc6e438>  Sat Jun  9 15:21:12 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 90, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    2.0ambda c0,c1:(1.4755512528820471*c0+0.+0.)
+		           ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee4615c0>  Sat Jun  9 15:38:07 2018  
+	lambda c0,c1:(0.05837025904133081*(np.sin(-1.5955678264424784*c0+-1.3634589515537896*c1+2.9282471766414253*_1.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee4615c0>  Sat Jun  9 15:38:07 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.05837025904133081*(np.sin(-1.5955678264424784*c0+-1.3634589515537896*c1+2.9282471766414253*_1.0+0.)+0.)+0.+0.)
+		                                                                                                                  ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee4615c0>  Sat Jun  9 15:38:07 2018  
+	lambda c0,c1:(0.05837025904133081*(np.sin(-1.5955678264424784*c0+-1.3634589515537896*c1+2.9282471766414253*_2.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee4615c0>  Sat Jun  9 15:38:07 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.05837025904133081*(np.sin(-1.5955678264424784*c0+-1.3634589515537896*c1+2.9282471766414253*_2.0+0.)+0.)+0.+0.)
+		                                                                                                                  ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee4615c0>  Sat Jun  9 15:38:07 2018  
+	lambda c0,c1:(0.05837025904133081*(np.sin(-1.5955678264424784*c0+-1.3634589515537896*c1+2.9282471766414253*_3.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee4615c0>  Sat Jun  9 15:38:07 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.05837025904133081*(np.sin(-1.5955678264424784*c0+-1.3634589515537896*c1+2.9282471766414253*_3.0+0.)+0.)+0.+0.)
+		                                                                                                                  ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee347128>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.7299840167277303*(np.sin(-1.4197015579708125*c0+-1.4418327155899207*c1+2.916516148549027*_1.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee347128>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.7299840167277303*(np.sin(-1.4197015579708125*c0+-1.4418327155899207*c1+2.916516148549027*_1.0+0.)+0.)+0.+0.)
+		                                                                                                                ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee347128>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.7299840167277303*(np.sin(-1.4197015579708125*c0+-1.4418327155899207*c1+2.916516148549027*_2.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee347128>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.7299840167277303*(np.sin(-1.4197015579708125*c0+-1.4418327155899207*c1+2.916516148549027*_2.0+0.)+0.)+0.+0.)
+		                                                                                                                ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee347128>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.7299840167277303*(np.sin(-1.4197015579708125*c0+-1.4418327155899207*c1+2.916516148549027*_3.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee347128>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.7299840167277303*(np.sin(-1.4197015579708125*c0+-1.4418327155899207*c1+2.916516148549027*_3.0+0.)+0.)+0.+0.)
+		                                                                                                                ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee1a9c18>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.46952349931825293*(np.sin(-1.3426155094731578*c0+-1.5123739574028723*c1+2.896794955925505*_1.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee1a9c18>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.46952349931825293*(np.sin(-1.3426155094731578*c0+-1.5123739574028723*c1+2.896794955925505*_1.0+0.)+0.)+0.+0.)
+		                                                                                                                 ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee1a9c18>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.46952349931825293*(np.sin(-1.3426155094731578*c0+-1.5123739574028723*c1+2.896794955925505*_2.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee1a9c18>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.46952349931825293*(np.sin(-1.3426155094731578*c0+-1.5123739574028723*c1+2.896794955925505*_2.0+0.)+0.)+0.+0.)
+		                                                                                                                 ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee1a9c18>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.46952349931825293*(np.sin(-1.3426155094731578*c0+-1.5123739574028723*c1+2.896794955925505*_3.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee1a9c18>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.46952349931825293*(np.sin(-1.3426155094731578*c0+-1.5123739574028723*c1+2.896794955925505*_3.0+0.)+0.)+0.+0.)
+		                                                                                                                 ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee08f7b8>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.551221988371178*(np.sin(-1.435667774107*c0+1.165691742458269*c1+2.7874081409252356*_1.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee08f7b8>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.551221988371178*(np.sin(-1.435667774107*c0+1.165691742458269*c1+2.7874081409252356*_1.0+0.)+0.)+0.+0.)
+		                                                                                                          ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee08f7b8>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.551221988371178*(np.sin(-1.435667774107*c0+1.165691742458269*c1+2.7874081409252356*_2.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee08f7b8>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.551221988371178*(np.sin(-1.435667774107*c0+1.165691742458269*c1+2.7874081409252356*_2.0+0.)+0.)+0.+0.)
+		                                                                                                          ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f7dee08f7b8>  Sat Jun  9 15:38:08 2018  
+	lambda c0,c1:(0.551221988371178*(np.sin(-1.435667774107*c0+1.165691742458269*c1+2.7874081409252356*_3.0+0.)+0.)+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f7dee08f7b8>  Sat Jun  9 15:38:08 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 91, in buildSmart
+		    cppn_func = eval( func_str )
+		  File "<string>", line 1
+		    lambda c0,c1:(0.551221988371178*(np.sin(-1.435667774107*c0+1.165691742458269*c1+2.7874081409252356*_3.0+0.)+0.)+0.+0.)
+		                                                                                                          ^
+		SyntaxError: invalid syntax
+		
+
+<genetics.Substrate.Substrate object at 0x7f8126a75748>  Sat Jun  9 19:30:29 2018  
+	lambda c0,c1:(1.0558936535181322*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f8126a75748>  Sat Jun  9 19:30:29 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<__main__.Main object at 0x7f1bb7e8de10>  Sat Jun  9 19:38:28 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 143, in spec
+		    return self.env_specs[id]
+		KeyError: 'PoleCart-v1'
+		
+		During handling of the above exception, another exception occurred:
+		
+		Traceback (most recent call last):
+		  File "Main.py", line 47, in makeEnvironment
+		    return Environment2D(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/mvc/model/Environment.py", line 12, in __init__
+		    self.environment = gym.make(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 167, in make
+		    return registry.make(id)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 118, in make
+		    spec = self.spec(id)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 153, in spec
+		    raise error.UnregisteredEnv('No registered env with id: {}'.format(id))
+		gym.error.UnregisteredEnv: No registered env with id: PoleCart-v1
+		
+
+<genetics.Substrate.Substrate object at 0x7fa9a80ce278>  Sat Jun  9 19:38:56 2018  
+	lambda c0,c1:(1.4974697998564324*c0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fa9a80ce278>  Sat Jun  9 19:38:56 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7fa9a7f54390>  Sat Jun  9 19:38:56 2018  
+	lambda c0,c1:(-0.06328343833462213*_l_out+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fa9a7f54390>  Sat Jun  9 19:38:56 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7fa9a7ffbeb8>  Sat Jun  9 19:38:56 2018  
+	lambda c0,c1:(0.7556380206094371*c0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fa9a7ffbeb8>  Sat Jun  9 19:38:56 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7fa9a81f2908>  Sat Jun  9 19:38:56 2018  
+	lambda c0,c1:(-0.616091307254413*_l_in+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fa9a81f2908>  Sat Jun  9 19:38:56 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7f2118312f28>  Sat Jun  9 19:40:02 2018  
+	lambda c0,c1:(1.0558936535181322*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f2118312f28>  Sat Jun  9 19:40:02 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7f2118506710>  Sat Jun  9 19:40:02 2018  
+	lambda c0,c1:(-0.5520930278109315*_l_out+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f2118506710>  Sat Jun  9 19:40:02 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7f21185541d0>  Sat Jun  9 19:40:02 2018  
+	lambda c0,c1:(1.3936308431078706*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f21185541d0>  Sat Jun  9 19:40:02 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7f21183e5ef0>  Sat Jun  9 19:40:02 2018  
+	lambda c0,c1:(-0.15495702547604884*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f21183e5ef0>  Sat Jun  9 19:40:02 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7f46ca7a69b0>  Sat Jun  9 19:40:44 2018  
+	lambda c0,c1:(-0.15495702547604884*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f46ca7a69b0>  Sat Jun  9 19:40:44 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7fd79ef22b70>  Sat Jun  9 19:42:29 2018  
+	lambda _l_in,_l_out,c0,c1:(2.8302725723346223*c0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fd79ef22b70>  Sat Jun  9 19:42:29 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7f4df4938a20>  Sat Jun  9 19:45:17 2018  
+	[array([[[-0.75      , -0.25      , -0.83333333, -0.75      ],
+		        [-0.75      , -0.25      , -0.83333333, -0.25      ],
+		        [-0.75      , -0.25      , -0.83333333,  0.25      ],
+		        [-0.75      , -0.25      , -0.83333333,  0.75      ]],
+		
+		       [[-0.75      , -0.25      , -0.5       , -0.75      ],
+		        [-0.75      , -0.25      , -0.5       , -0.25      ],
+		        [-0.75      , -0.25      , -0.5       ,  0.25      ],
+		        [-0.75      , -0.25      , -0.5       ,  0.75      ]],
+		
+		       [[-0.75      , -0.25      , -0.16666667, -0.75      ],
+		        [-0.75      , -0.25      , -0.16666667, -0.25      ],
+		        [-0.75      , -0.25      , -0.16666667,  0.25      ],
+		        [-0.75      , -0.25      , -0.16666667,  0.75      ]],
+		
+		       [[-0.75      , -0.25      ,  0.16666667, -0.75      ],
+		        [-0.75      , -0.25      ,  0.16666667, -0.25      ],
+		        [-0.75      , -0.25      ,  0.16666667,  0.25      ],
+		        [-0.75      , -0.25      ,  0.16666667,  0.75      ]],
+		
+		       [[-0.75      , -0.25      ,  0.5       , -0.75      ],
+		        [-0.75      , -0.25      ,  0.5       , -0.25      ],
+		        [-0.75      , -0.25      ,  0.5       ,  0.25      ],
+		        [-0.75      , -0.25      ,  0.5       ,  0.75      ]],
+		
+		       [[-0.75      , -0.25      ,  0.83333333, -0.75      ],
+		        [-0.75      , -0.25      ,  0.83333333, -0.25      ],
+		        [-0.75      , -0.25      ,  0.83333333,  0.25      ],
+		        [-0.75      , -0.25      ,  0.83333333,  0.75      ]]]), array([[[-0.25      ,  0.25      , -0.75      , -0.83333333],
+		        [-0.25      ,  0.25      , -0.75      , -0.5       ],
+		        [-0.25      ,  0.25      , -0.75      , -0.16666667],
+		        [-0.25      ,  0.25      , -0.75      ,  0.16666667],
+		        [-0.25      ,  0.25      , -0.75      ,  0.5       ],
+		        [-0.25      ,  0.25      , -0.75      ,  0.83333333]],
+		
+		       [[-0.25      ,  0.25      , -0.25      , -0.83333333],
+		        [-0.25      ,  0.25      , -0.25      , -0.5       ],
+		        [-0.25      ,  0.25      , -0.25      , -0.16666667],
+		        [-0.25      ,  0.25      , -0.25      ,  0.16666667],
+		        [-0.25      ,  0.25      , -0.25      ,  0.5       ],
+		        [-0.25      ,  0.25      , -0.25      ,  0.83333333]],
+		
+		       [[-0.25      ,  0.25      ,  0.25      , -0.83333333],
+		        [-0.25      ,  0.25      ,  0.25      , -0.5       ],
+		        [-0.25      ,  0.25      ,  0.25      , -0.16666667],
+		        [-0.25      ,  0.25      ,  0.25      ,  0.16666667],
+		        [-0.25      ,  0.25      ,  0.25      ,  0.5       ],
+		        [-0.25      ,  0.25      ,  0.25      ,  0.83333333]],
+		
+		       [[-0.25      ,  0.25      ,  0.75      , -0.83333333],
+		        [-0.25      ,  0.25      ,  0.75      , -0.5       ],
+		        [-0.25      ,  0.25      ,  0.75      , -0.16666667],
+		        [-0.25      ,  0.25      ,  0.75      ,  0.16666667],
+		        [-0.25      ,  0.25      ,  0.75      ,  0.5       ],
+		        [-0.25      ,  0.25      ,  0.75      ,  0.83333333]]]), array([[[ 0.25,  0.75, -0.5 , -0.75],
+		        [ 0.25,  0.75, -0.5 , -0.25],
+		        [ 0.25,  0.75, -0.5 ,  0.25],
+		        [ 0.25,  0.75, -0.5 ,  0.75]],
+		
+		       [[ 0.25,  0.75,  0.5 , -0.75],
+		        [ 0.25,  0.75,  0.5 , -0.25],
+		        [ 0.25,  0.75,  0.5 ,  0.25],
+		        [ 0.25,  0.75,  0.5 ,  0.75]]])]
+
+<genetics.Substrate.Substrate object at 0x7f4df4938a20>  Sat Jun  9 19:45:17 2018  
+	lambda _l_in,_l_out,c0,c1:(-0.616091307254413*_l_in+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4df4938a20>  Sat Jun  9 19:45:17 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7f0edb4e5a90>  Sat Jun  9 19:47:27 2018  
+	[[[-0.75       -0.25       -0.83333333 -0.75      ]
+		  [-0.75       -0.25       -0.83333333 -0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.75      ]]
+		
+		 [[-0.75       -0.25       -0.5        -0.75      ]
+		  [-0.75       -0.25       -0.5        -0.25      ]
+		  [-0.75       -0.25       -0.5         0.25      ]
+		  [-0.75       -0.25       -0.5         0.75      ]]
+		
+		 [[-0.75       -0.25       -0.16666667 -0.75      ]
+		  [-0.75       -0.25       -0.16666667 -0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.16666667 -0.75      ]
+		  [-0.75       -0.25        0.16666667 -0.25      ]
+		  [-0.75       -0.25        0.16666667  0.25      ]
+		  [-0.75       -0.25        0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.5        -0.75      ]
+		  [-0.75       -0.25        0.5        -0.25      ]
+		  [-0.75       -0.25        0.5         0.25      ]
+		  [-0.75       -0.25        0.5         0.75      ]]
+		
+		 [[-0.75       -0.25        0.83333333 -0.75      ]
+		  [-0.75       -0.25        0.83333333 -0.25      ]
+		  [-0.75       -0.25        0.83333333  0.25      ]
+		  [-0.75       -0.25        0.83333333  0.75      ]]]
+
+<genetics.Substrate.Substrate object at 0x7f0edb4e5a90>  Sat Jun  9 19:47:27 2018  
+	[[[-0.25        0.25       -0.75       -0.83333333]
+		  [-0.25        0.25       -0.75       -0.5       ]
+		  [-0.25        0.25       -0.75       -0.16666667]
+		  [-0.25        0.25       -0.75        0.16666667]
+		  [-0.25        0.25       -0.75        0.5       ]
+		  [-0.25        0.25       -0.75        0.83333333]]
+		
+		 [[-0.25        0.25       -0.25       -0.83333333]
+		  [-0.25        0.25       -0.25       -0.5       ]
+		  [-0.25        0.25       -0.25       -0.16666667]
+		  [-0.25        0.25       -0.25        0.16666667]
+		  [-0.25        0.25       -0.25        0.5       ]
+		  [-0.25        0.25       -0.25        0.83333333]]
+		
+		 [[-0.25        0.25        0.25       -0.83333333]
+		  [-0.25        0.25        0.25       -0.5       ]
+		  [-0.25        0.25        0.25       -0.16666667]
+		  [-0.25        0.25        0.25        0.16666667]
+		  [-0.25        0.25        0.25        0.5       ]
+		  [-0.25        0.25        0.25        0.83333333]]
+		
+		 [[-0.25        0.25        0.75       -0.83333333]
+		  [-0.25        0.25        0.75       -0.5       ]
+		  [-0.25        0.25        0.75       -0.16666667]
+		  [-0.25        0.25        0.75        0.16666667]
+		  [-0.25        0.25        0.75        0.5       ]
+		  [-0.25        0.25        0.75        0.83333333]]]
+
+<genetics.Substrate.Substrate object at 0x7f0edb4e5a90>  Sat Jun  9 19:47:27 2018  
+	lambda _l_in,_l_out,c0,c1:(-0.15495702547604884*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f0edb4e5a90>  Sat Jun  9 19:47:27 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7fa2f895aac8>  Sat Jun  9 19:48:23 2018  
+	0
+
+<genetics.Substrate.Substrate object at 0x7fa2f895aac8>  Sat Jun  9 19:48:23 2018  
+	[[[-0.75       -0.25       -0.83333333 -0.75      ]
+		  [-0.75       -0.25       -0.83333333 -0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.75      ]]
+		
+		 [[-0.75       -0.25       -0.5        -0.75      ]
+		  [-0.75       -0.25       -0.5        -0.25      ]
+		  [-0.75       -0.25       -0.5         0.25      ]
+		  [-0.75       -0.25       -0.5         0.75      ]]
+		
+		 [[-0.75       -0.25       -0.16666667 -0.75      ]
+		  [-0.75       -0.25       -0.16666667 -0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.16666667 -0.75      ]
+		  [-0.75       -0.25        0.16666667 -0.25      ]
+		  [-0.75       -0.25        0.16666667  0.25      ]
+		  [-0.75       -0.25        0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.5        -0.75      ]
+		  [-0.75       -0.25        0.5        -0.25      ]
+		  [-0.75       -0.25        0.5         0.25      ]
+		  [-0.75       -0.25        0.5         0.75      ]]
+		
+		 [[-0.75       -0.25        0.83333333 -0.75      ]
+		  [-0.75       -0.25        0.83333333 -0.25      ]
+		  [-0.75       -0.25        0.83333333  0.25      ]
+		  [-0.75       -0.25        0.83333333  0.75      ]]]
+
+<genetics.Substrate.Substrate object at 0x7fa2f895aac8>  Sat Jun  9 19:48:23 2018  
+	1
+
+<genetics.Substrate.Substrate object at 0x7fa2f895aac8>  Sat Jun  9 19:48:23 2018  
+	[[[-0.25        0.25       -0.75       -0.83333333]
+		  [-0.25        0.25       -0.75       -0.5       ]
+		  [-0.25        0.25       -0.75       -0.16666667]
+		  [-0.25        0.25       -0.75        0.16666667]
+		  [-0.25        0.25       -0.75        0.5       ]
+		  [-0.25        0.25       -0.75        0.83333333]]
+		
+		 [[-0.25        0.25       -0.25       -0.83333333]
+		  [-0.25        0.25       -0.25       -0.5       ]
+		  [-0.25        0.25       -0.25       -0.16666667]
+		  [-0.25        0.25       -0.25        0.16666667]
+		  [-0.25        0.25       -0.25        0.5       ]
+		  [-0.25        0.25       -0.25        0.83333333]]
+		
+		 [[-0.25        0.25        0.25       -0.83333333]
+		  [-0.25        0.25        0.25       -0.5       ]
+		  [-0.25        0.25        0.25       -0.16666667]
+		  [-0.25        0.25        0.25        0.16666667]
+		  [-0.25        0.25        0.25        0.5       ]
+		  [-0.25        0.25        0.25        0.83333333]]
+		
+		 [[-0.25        0.25        0.75       -0.83333333]
+		  [-0.25        0.25        0.75       -0.5       ]
+		  [-0.25        0.25        0.75       -0.16666667]
+		  [-0.25        0.25        0.75        0.16666667]
+		  [-0.25        0.25        0.75        0.5       ]
+		  [-0.25        0.25        0.75        0.83333333]]]
+
+<genetics.Substrate.Substrate object at 0x7fa2f895aac8>  Sat Jun  9 19:48:23 2018  
+	lambda _l_in,_l_out,c0,c1:(0.29769626231354707*_l_out+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fa2f895aac8>  Sat Jun  9 19:48:23 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 88, in buildWeights
+		    self.coords[:-1][2],
+		IndexError: list index out of range
+		
+
+<genetics.Substrate.Substrate object at 0x7f19fbdec9e8>  Sat Jun  9 19:52:14 2018  
+	[[[-0.75       -0.25       -0.83333333 -0.75      ]
+		  [-0.75       -0.25       -0.83333333 -0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.75      ]]
+		
+		 [[-0.75       -0.25       -0.5        -0.75      ]
+		  [-0.75       -0.25       -0.5        -0.25      ]
+		  [-0.75       -0.25       -0.5         0.25      ]
+		  [-0.75       -0.25       -0.5         0.75      ]]
+		
+		 [[-0.75       -0.25       -0.16666667 -0.75      ]
+		  [-0.75       -0.25       -0.16666667 -0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.16666667 -0.75      ]
+		  [-0.75       -0.25        0.16666667 -0.25      ]
+		  [-0.75       -0.25        0.16666667  0.25      ]
+		  [-0.75       -0.25        0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.5        -0.75      ]
+		  [-0.75       -0.25        0.5        -0.25      ]
+		  [-0.75       -0.25        0.5         0.25      ]
+		  [-0.75       -0.25        0.5         0.75      ]]
+		
+		 [[-0.75       -0.25        0.83333333 -0.75      ]
+		  [-0.75       -0.25        0.83333333 -0.25      ]
+		  [-0.75       -0.25        0.83333333  0.25      ]
+		  [-0.75       -0.25        0.83333333  0.75      ]]]
+
+<genetics.Substrate.Substrate object at 0x7f19fbdec9e8>  Sat Jun  9 19:52:14 2018  
+	lambda _l_in,_l_out,c0,c1:(-2.3660118944295365*_l_out+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f19fbdec9e8>  Sat Jun  9 19:52:14 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 89, in buildWeights
+		    self.coords[...,3]) )
+		IndexError: index 3 is out of bounds for axis 0 with size 3
+		
+
+<genetics.Substrate.Substrate object at 0x7f506c7668d0>  Sat Jun  9 19:54:24 2018  
+	[ array([[[-0.75      , -0.25      , -0.83333333, -0.75      ],
+		        [-0.75      , -0.25      , -0.83333333, -0.25      ],
+		        [-0.75      , -0.25      , -0.83333333,  0.25      ],
+		        [-0.75      , -0.25      , -0.83333333,  0.75      ]],
+		
+		       [[-0.75      , -0.25      , -0.5       , -0.75      ],
+		        [-0.75      , -0.25      , -0.5       , -0.25      ],
+		        [-0.75      , -0.25      , -0.5       ,  0.25      ],
+		        [-0.75      , -0.25      , -0.5       ,  0.75      ]],
+		
+		       [[-0.75      , -0.25      , -0.16666667, -0.75      ],
+		        [-0.75      , -0.25      , -0.16666667, -0.25      ],
+		        [-0.75      , -0.25      , -0.16666667,  0.25      ],
+		        [-0.75      , -0.25      , -0.16666667,  0.75      ]],
+		
+		       [[-0.75      , -0.25      ,  0.16666667, -0.75      ],
+		        [-0.75      , -0.25      ,  0.16666667, -0.25      ],
+		        [-0.75      , -0.25      ,  0.16666667,  0.25      ],
+		        [-0.75      , -0.25      ,  0.16666667,  0.75      ]],
+		
+		       [[-0.75      , -0.25      ,  0.5       , -0.75      ],
+		        [-0.75      , -0.25      ,  0.5       , -0.25      ],
+		        [-0.75      , -0.25      ,  0.5       ,  0.25      ],
+		        [-0.75      , -0.25      ,  0.5       ,  0.75      ]],
+		
+		       [[-0.75      , -0.25      ,  0.83333333, -0.75      ],
+		        [-0.75      , -0.25      ,  0.83333333, -0.25      ],
+		        [-0.75      , -0.25      ,  0.83333333,  0.25      ],
+		        [-0.75      , -0.25      ,  0.83333333,  0.75      ]]])
+		 array([[[-0.25      ,  0.25      , -0.75      , -0.83333333],
+		        [-0.25      ,  0.25      , -0.75      , -0.5       ],
+		        [-0.25      ,  0.25      , -0.75      , -0.16666667],
+		        [-0.25      ,  0.25      , -0.75      ,  0.16666667],
+		        [-0.25      ,  0.25      , -0.75      ,  0.5       ],
+		        [-0.25      ,  0.25      , -0.75      ,  0.83333333]],
+		
+		       [[-0.25      ,  0.25      , -0.25      , -0.83333333],
+		        [-0.25      ,  0.25      , -0.25      , -0.5       ],
+		        [-0.25      ,  0.25      , -0.25      , -0.16666667],
+		        [-0.25      ,  0.25      , -0.25      ,  0.16666667],
+		        [-0.25      ,  0.25      , -0.25      ,  0.5       ],
+		        [-0.25      ,  0.25      , -0.25      ,  0.83333333]],
+		
+		       [[-0.25      ,  0.25      ,  0.25      , -0.83333333],
+		        [-0.25      ,  0.25      ,  0.25      , -0.5       ],
+		        [-0.25      ,  0.25      ,  0.25      , -0.16666667],
+		        [-0.25      ,  0.25      ,  0.25      ,  0.16666667],
+		        [-0.25      ,  0.25      ,  0.25      ,  0.5       ],
+		        [-0.25      ,  0.25      ,  0.25      ,  0.83333333]],
+		
+		       [[-0.25      ,  0.25      ,  0.75      , -0.83333333],
+		        [-0.25      ,  0.25      ,  0.75      , -0.5       ],
+		        [-0.25      ,  0.25      ,  0.75      , -0.16666667],
+		        [-0.25      ,  0.25      ,  0.75      ,  0.16666667],
+		        [-0.25      ,  0.25      ,  0.75      ,  0.5       ],
+		        [-0.25      ,  0.25      ,  0.75      ,  0.83333333]]])
+		 array([[[ 0.25,  0.75, -0.5 , -0.75],
+		        [ 0.25,  0.75, -0.5 , -0.25],
+		        [ 0.25,  0.75, -0.5 ,  0.25],
+		        [ 0.25,  0.75, -0.5 ,  0.75]],
+		
+		       [[ 0.25,  0.75,  0.5 , -0.75],
+		        [ 0.25,  0.75,  0.5 , -0.25],
+		        [ 0.25,  0.75,  0.5 ,  0.25],
+		        [ 0.25,  0.75,  0.5 ,  0.75]]])]
+
+<genetics.Substrate.Substrate object at 0x7f506c7668d0>  Sat Jun  9 19:54:24 2018  
+	lambda _l_in,_l_out,c0,c1:(0.29769626231354707*_l_out+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f506c7668d0>  Sat Jun  9 19:54:24 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 89, in buildWeights
+		    self.coords[...,3]) )
+		IndexError: index 3 is out of bounds for axis 0 with size 3
+		
+
+<genetics.Substrate.Substrate object at 0x7f223765ca90>  Sat Jun  9 19:55:52 2018  
+	[[[-0.75       -0.25       -0.83333333 -0.75      ]
+		  [-0.75       -0.25       -0.83333333 -0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.75      ]]
+		
+		 [[-0.75       -0.25       -0.5        -0.75      ]
+		  [-0.75       -0.25       -0.5        -0.25      ]
+		  [-0.75       -0.25       -0.5         0.25      ]
+		  [-0.75       -0.25       -0.5         0.75      ]]
+		
+		 [[-0.75       -0.25       -0.16666667 -0.75      ]
+		  [-0.75       -0.25       -0.16666667 -0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.16666667 -0.75      ]
+		  [-0.75       -0.25        0.16666667 -0.25      ]
+		  [-0.75       -0.25        0.16666667  0.25      ]
+		  [-0.75       -0.25        0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.5        -0.75      ]
+		  [-0.75       -0.25        0.5        -0.25      ]
+		  [-0.75       -0.25        0.5         0.25      ]
+		  [-0.75       -0.25        0.5         0.75      ]]
+		
+		 [[-0.75       -0.25        0.83333333 -0.75      ]
+		  [-0.75       -0.25        0.83333333 -0.25      ]
+		  [-0.75       -0.25        0.83333333  0.25      ]
+		  [-0.75       -0.25        0.83333333  0.75      ]]]
+
+<genetics.Substrate.Substrate object at 0x7f223765ca90>  Sat Jun  9 19:55:52 2018  
+	lambda _l_in,_l_out,c0,c1:(1.4974697998564324*c0+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f223765ca90>  Sat Jun  9 19:55:52 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 89, in buildWeights
+		    self.coords[...,3]) )
+		IndexError: index 3 is out of bounds for axis 0 with size 3
+		
+
+<genetics.Substrate.Substrate object at 0x7fe4ce0b27f0>  Sat Jun  9 19:56:13 2018  
+	[[[-0.75       -0.25       -0.83333333 -0.75      ]
+		  [-0.75       -0.25       -0.83333333 -0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.75      ]]
+		
+		 [[-0.75       -0.25       -0.5        -0.75      ]
+		  [-0.75       -0.25       -0.5        -0.25      ]
+		  [-0.75       -0.25       -0.5         0.25      ]
+		  [-0.75       -0.25       -0.5         0.75      ]]
+		
+		 [[-0.75       -0.25       -0.16666667 -0.75      ]
+		  [-0.75       -0.25       -0.16666667 -0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.16666667 -0.75      ]
+		  [-0.75       -0.25        0.16666667 -0.25      ]
+		  [-0.75       -0.25        0.16666667  0.25      ]
+		  [-0.75       -0.25        0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.5        -0.75      ]
+		  [-0.75       -0.25        0.5        -0.25      ]
+		  [-0.75       -0.25        0.5         0.25      ]
+		  [-0.75       -0.25        0.5         0.75      ]]
+		
+		 [[-0.75       -0.25        0.83333333 -0.75      ]
+		  [-0.75       -0.25        0.83333333 -0.25      ]
+		  [-0.75       -0.25        0.83333333  0.25      ]
+		  [-0.75       -0.25        0.83333333  0.75      ]]]
+
+<genetics.Substrate.Substrate object at 0x7fe4ce0b27f0>  Sat Jun  9 19:56:13 2018  
+	lambda _l_in,_l_out,c0,c1:(-2.4510789756134708*c1+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7fe4ce0b27f0>  Sat Jun  9 19:56:13 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 89, in buildWeights
+		    self.coords[...,3]) )
+		IndexError: index 3 is out of bounds for axis 0 with size 3
+		
+
+<genetics.Substrate.Substrate object at 0x7f4c5e2fdb00>  Sat Jun  9 19:56:43 2018  
+	[[[-0.75       -0.25       -0.83333333 -0.75      ]
+		  [-0.75       -0.25       -0.83333333 -0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.75      ]]
+		
+		 [[-0.75       -0.25       -0.5        -0.75      ]
+		  [-0.75       -0.25       -0.5        -0.25      ]
+		  [-0.75       -0.25       -0.5         0.25      ]
+		  [-0.75       -0.25       -0.5         0.75      ]]
+		
+		 [[-0.75       -0.25       -0.16666667 -0.75      ]
+		  [-0.75       -0.25       -0.16666667 -0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.16666667 -0.75      ]
+		  [-0.75       -0.25        0.16666667 -0.25      ]
+		  [-0.75       -0.25        0.16666667  0.25      ]
+		  [-0.75       -0.25        0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.5        -0.75      ]
+		  [-0.75       -0.25        0.5        -0.25      ]
+		  [-0.75       -0.25        0.5         0.25      ]
+		  [-0.75       -0.25        0.5         0.75      ]]
+		
+		 [[-0.75       -0.25        0.83333333 -0.75      ]
+		  [-0.75       -0.25        0.83333333 -0.25      ]
+		  [-0.75       -0.25        0.83333333  0.25      ]
+		  [-0.75       -0.25        0.83333333  0.75      ]]]
+
+<genetics.Substrate.Substrate object at 0x7f4c5e2fdb00>  Sat Jun  9 19:56:43 2018  
+	lambda _l_in,_l_out,c0,c1:(-2.3660118944295365*_l_out+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f4c5e2fdb00>  Sat Jun  9 19:56:43 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 89, in buildWeights
+		    self.coords[...,3]) )
+		IndexError: index 3 is out of bounds for axis 0 with size 3
+		
+
+<genetics.Substrate.Substrate object at 0x7f61b3cceb00>  Sat Jun  9 19:57:04 2018  
+	[[[-0.75       -0.25       -0.83333333 -0.75      ]
+		  [-0.75       -0.25       -0.83333333 -0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.25      ]
+		  [-0.75       -0.25       -0.83333333  0.75      ]]
+		
+		 [[-0.75       -0.25       -0.5        -0.75      ]
+		  [-0.75       -0.25       -0.5        -0.25      ]
+		  [-0.75       -0.25       -0.5         0.25      ]
+		  [-0.75       -0.25       -0.5         0.75      ]]
+		
+		 [[-0.75       -0.25       -0.16666667 -0.75      ]
+		  [-0.75       -0.25       -0.16666667 -0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.25      ]
+		  [-0.75       -0.25       -0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.16666667 -0.75      ]
+		  [-0.75       -0.25        0.16666667 -0.25      ]
+		  [-0.75       -0.25        0.16666667  0.25      ]
+		  [-0.75       -0.25        0.16666667  0.75      ]]
+		
+		 [[-0.75       -0.25        0.5        -0.75      ]
+		  [-0.75       -0.25        0.5        -0.25      ]
+		  [-0.75       -0.25        0.5         0.25      ]
+		  [-0.75       -0.25        0.5         0.75      ]]
+		
+		 [[-0.75       -0.25        0.83333333 -0.75      ]
+		  [-0.75       -0.25        0.83333333 -0.25      ]
+		  [-0.75       -0.25        0.83333333  0.25      ]
+		  [-0.75       -0.25        0.83333333  0.75      ]]]
+
+<genetics.Substrate.Substrate object at 0x7f61b3cceb00>  Sat Jun  9 19:57:04 2018  
+	lambda _l_in,_l_out,c0,c1:(2.903865887758969*_l_in+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f61b3cceb00>  Sat Jun  9 19:57:04 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 89, in buildWeights
+		    self.coords[...,3]) )
+		IndexError: index 3 is out of bounds for axis 0 with size 3
+		
+
+<genetics.Substrate.Substrate object at 0x7f1328128b38>  Sat Jun  9 19:58:04 2018  
+	(3,)
+
+<genetics.Substrate.Substrate object at 0x7f1328128b38>  Sat Jun  9 19:58:04 2018  
+	lambda _l_in,_l_out,c0,c1:(2.903865887758969*_l_in+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f1328128b38>  Sat Jun  9 19:58:04 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 89, in buildWeights
+		    self.coords[...,3]) )
+		IndexError: index 3 is out of bounds for axis 0 with size 3
+		
+
+<genetics.Substrate.Substrate object at 0x7f0b2e1b3b00>  Sat Jun  9 19:58:34 2018  
+	(6, 4, 4)
+
+<genetics.Substrate.Substrate object at 0x7f0b2e1b3b00>  Sat Jun  9 19:58:34 2018  
+	lambda _l_in,_l_out,c0,c1:(-0.06328343833462213*_l_out+0.+0.)
+
+<genetics.Substrate.Substrate object at 0x7f0b2e1b3b00>  Sat Jun  9 19:58:34 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/genetics/Substrate.py", line 89, in buildWeights
+		    self.coords[...,3]) )
+		IndexError: index 3 is out of bounds for axis 0 with size 3
+		
+
+<__main__.Main object at 0x7f52eceaae10>  Mon Jun 11 17:43:09 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 143, in spec
+		    return self.env_specs[id]
+		KeyError: 'HillClimb-v1'
+		
+		During handling of the above exception, another exception occurred:
+		
+		Traceback (most recent call last):
+		  File "Main.py", line 47, in makeEnvironment
+		    return Environment2D(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/mvc/model/Environment.py", line 12, in __init__
+		    self.environment = gym.make(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 167, in make
+		    return registry.make(id)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 118, in make
+		    spec = self.spec(id)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 153, in spec
+		    raise error.UnregisteredEnv('No registered env with id: {}'.format(id))
+		gym.error.UnregisteredEnv: No registered env with id: HillClimb-v1
+		
+
+<__main__.Main object at 0x7fde38893e10>  Mon Jun 11 17:43:18 2018  
+	Traceback (most recent call last):
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 143, in spec
+		    return self.env_specs[id]
+		KeyError: 'HillClimb-v0'
+		
+		During handling of the above exception, another exception occurred:
+		
+		Traceback (most recent call last):
+		  File "Main.py", line 47, in makeEnvironment
+		    return Environment2D(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/mvc/model/Environment.py", line 12, in __init__
+		    self.environment = gym.make(environment_name)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 167, in make
+		    return registry.make(id)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 118, in make
+		    spec = self.spec(id)
+		  File "/media/kieran/DATA/Ubuntu/Documents/Natural Computing/OpenAI/HyperNEAT/src/gym/gym/envs/registration.py", line 153, in spec
+		    raise error.UnregisteredEnv('No registered env with id: {}'.format(id))
+		gym.error.UnregisteredEnv: No registered env with id: HillClimb-v0
+		
+
